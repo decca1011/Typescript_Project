@@ -1,0 +1,17 @@
+config.json
+# Ignore dependencies in node_modules/
+node_modules/
+node_modules
+
+ 
+
+package.json
+
+package-lock.json
+
+
+# Optionally ignore project-specific TypeScript config
+tsconfig.json
+
+
+ 
