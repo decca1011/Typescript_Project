@@ -10,4 +10,9 @@ const todos_1 = __importDefault(require("./routes/todos"));
 const app = (0, express_1.default)();
 app.use(body_parser_1.default.json());
 app.use(todos_1.default);
-app.listen({ port: 3000 });
+app.use('/post/mytodo', (req, res, next) => {
+    console.log(req.body);
+    // Send a simple response
+    res.send('Your to-do has been received.');
+});
+app.listen({ port: 3000 }, () => { console.log(`Server ready at http://localhost:3000`); });
